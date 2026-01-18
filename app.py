@@ -102,7 +102,7 @@ st.write("Don't have test data? Download our sample test CSV file:")
 
 try:
     # Load the sample test data
-    sample_test_path = "data/test.csv"
+    sample_test_path = "test.csv"
     if os.path.exists(sample_test_path):
         with open(sample_test_path, "rb") as file:
             st.download_button(
