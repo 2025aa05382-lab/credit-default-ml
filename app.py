@@ -96,6 +96,27 @@ st.info(
     "All other feature columns should match the dataset format."
 )
 
+# Add download button for sample test data
+st.markdown("### 📥 Download Sample Test Data")
+st.write("Don't have test data? Download our sample test CSV file:")
+
+try:
+    # Load the sample test data
+    sample_test_path = "data/test.csv"
+    if os.path.exists(sample_test_path):
+        with open(sample_test_path, "rb") as file:
+            st.download_button(
+                label="⬇️ Download Sample Test CSV",
+                data=file,
+                file_name="test.csv",
+                mime="text/csv",
+                help="Download a sample test dataset to try out the app"
+            )
+    else:
+        st.warning(f"Sample test file not found at: {sample_test_path}")
+except Exception as e:
+    st.warning(f"Could not load sample test file: {e}")
+
 if uploaded is None:
     st.stop()
 
@@ -189,13 +210,3 @@ if 'metrics' in locals():
 else:
     st.info("Upload a CSV and select a model to see evaluation results.")
 
-# Optional: show overall comparison table if present
-st.markdown("---")
-st.subheader("All Models Comparison Table (if available)")
-
-comparison_path = "artifacts/model_comparison_metrics.csv"
-if os.path.exists(comparison_path):
-    comp_df = pd.read_csv(comparison_path)
-    st.dataframe(comp_df)
-else:
-    st.warning("Comparison table not found. Run `python train_models.py` to generate artifacts/model_comparison_metrics.csv")
