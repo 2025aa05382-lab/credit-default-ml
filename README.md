@@ -2,6 +2,13 @@
 
 ---
 
+## Student Information
+
+- **Name:** GANESAN V
+- **BITS ID:** 2025AA05382
+- **Course:** Machine Learning Assignment 2
+---
+
 ## a. Problem Statement
 
 The objective of this project is to build and compare multiple **machine learning classification models** to predict whether a credit card customer will **default on their payment in the next month**.  
@@ -66,5 +73,6 @@ The following six machine learning classification models were implemented on the
 The experimental results show that **ensemble models (Random Forest and XGBoost)** outperform individual classifiers on this dataset.  
 XGBoost achieved the highest overall accuracy, while Random Forest provided consistently strong performance across all evaluation metrics.  
 These findings highlight the effectiveness of ensemble learning techniques for handling **imbalanced financial datasets** such as credit card default prediction.
+
 
 ---
