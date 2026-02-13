@@ -6,5 +6,6 @@ joblib
 xgboost
 matplotlib
 seaborn
+plotly
 openpyxl
 xlrd
