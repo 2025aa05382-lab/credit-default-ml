@@ -71,16 +71,17 @@ The following six machine learning classification models were implemented on the
 
 ## Summary
 
-The experimental results show that **ensemble models (Random Forest and XGBoost)** significantly outperform individual classifiers on this imbalanced dataset.  
+The experimental results demonstrate that **ensemble models significantly outperform individual classifiers** on this imbalanced dataset.
 
-**Random Forest** emerged as the most reliable model overall, achieving the highest AUC (0.773) and MCC (0.401) with excellent balance between precision (0.532) and recall (0.536). This balanced performance makes it particularly suitable for credit default prediction where both false positives and false negatives have significant costs.
+**Random Forest** achieved the best overall balance with the highest AUC (0.773) and MCC (0.401), along with well-balanced precision (0.532) and recall (0.536), making it the most reliable model for credit default prediction.
 
-**XGBoost** achieved the highest accuracy (0.817) and precision (0.657), demonstrating exceptional ability to correctly identify non-defaulters and minimize false alarms. However, its lower recall (0.365) indicates it may miss more actual defaulters compared to Random Forest.
+**XGBoost** delivered the highest accuracy (0.817) and precision (0.657), excelling at identifying non-defaulters, though with moderate recall (0.365).
 
-Among individual classifiers, **kNN** performed best with high accuracy (0.810) and good AUC (0.729), though its low recall (0.356) suggests bias toward the majority class. **Naive Bayes** achieved exceptional recall (0.971), capturing almost all defaulters, but at the cost of very low precision (0.234) and accuracy (0.290), making it impractical for production use.
+Among individual classifiers, **kNN** performed best with high accuracy (0.810) and good AUC (0.729), while **Logistic Regression** provided balanced recall (0.632) suitable as a baseline. **Decision Tree** showed the lowest AUC (0.612) and MCC (0.224), indicating poor generalization. **Naive Bayes** achieved exceptional recall (0.971) but impractically low precision (0.234).
 
-These findings highlight the effectiveness of **ensemble learning techniques** for handling imbalanced financial datasets, with Random Forest offering the best overall trade-off between all evaluation metrics for credit card default prediction.
+These findings highlight the effectiveness of **ensemble learning techniques** for handling imbalanced financial datasets.
 
 
 ---
+
 
